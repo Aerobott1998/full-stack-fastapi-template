@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git 'https://your-repo-url.git'
+                git 'https://github.com/Aerobott1998/full-stack-fastapi-template.git'
             }
         }
         
