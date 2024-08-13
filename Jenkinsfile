@@ -6,13 +6,14 @@ pipeline {
         DATABASE_URL = 'postgresql://user:password@localhost:5432/mydatabase'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from the repository
-                git 'https://github.com/Aerobott1998/full-stack-fastapi-template.git'
-            }
-        }
+    stage('Checkout') {
+    steps {
+        // Checkout the code from the repository with specified branch and credentials
+        git branch: 'dev',
+            url: 'https://github.com/Aerobott1998/full-stack-fastapi-template.git',
+            credentialsId: 'demo'
+    }
+}
         
         stage('Install Dependencies') {
             parallel {
