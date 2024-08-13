@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define environment variables, such as database URL, credentials, etc.
-        DATABASE_URL = 'postgresql://user:password@localhost:5432/mydatabase'
+        DATABASE_URL = 'postgres://postgres:1234@localhost:5432/roboticsPlatform'
     }
 
     stage('Checkout') {
